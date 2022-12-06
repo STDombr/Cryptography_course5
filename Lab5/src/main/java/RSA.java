@@ -6,8 +6,10 @@ public class RSA {
 
     public static void main(String[] args) {
 
-        int msg = 12;
         Random random = new Random();
+
+        int input = 998;
+        System.out.println("Input message: " + input);
 
         int n, f, d = 0, e, i;
 
@@ -46,7 +48,7 @@ public class RSA {
         }
         System.out.println("d = " + d);
 
-        double enc = Math.pow(msg, e) % n;
+        double enc = Math.pow(input, e) % n;
         System.out.println("Encrypted message: " + enc);
 
         BigInteger N = BigInteger.valueOf(n);
